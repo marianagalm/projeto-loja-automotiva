@@ -220,25 +220,25 @@
     <footer>
         <div class="container container-flex">
             <p>
-            2022 &copy; EBAC Motors - Todos os Direitos Reservados.
-        </p>
-        <ul class="container-flex">
-            <li>
-                <a href="#">
-                    <img src="./icones/facebook.png" alt="Facebook">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="./icones/instagram.png" alt="Instagram">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="./icones/youtube.png" alt="Youtube">
-                </a>
-            </li>
-        </ul>
+                2022 &copy; EBAC Motors - Todos os Direitos Reservados.
+            </p>
+            <ul class="container-flex">
+                <li>
+                    <a href="#">
+                        <img src="./icones/facebook.png" alt="Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./icones/instagram.png" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./icones/youtube.png" alt="Youtube">
+                    </a>
+                </li>
+            </ul>
         </div>
     </footer>
 
@@ -249,12 +249,12 @@
     <script src="./js/jquery.validate.min.js"></script>
     <script src="./js/messages_pt_BR.min.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#carousel-imagens').slick({
                 autoplay: true,
             });
 
-            $('.menu-hamburguer').click(function () {
+            $('.menu-hamburguer').click(function() {
                 $('nav').slideToggle();
             })
 
@@ -264,35 +264,34 @@
                 rules: {
                     nome: {
                         required: true
-                        },
-                        email: {
-                            required: true
-                            email: true
-                        },
-                        telefone: {
-                            required: true
-                        },
-                        mensagem: {
-                            required: true,
-                        },
-                        veiculoDeInteresse: {
-                            required: false,
-                        }
                     },
-                    messages: {
-                        nome: 'Por favor, insira o seu nome'
+                    email: {
+                        required: true
                     },
-                    submitHandler: function(form) {
-                        console.log(form)
+                    telefone: {
+                        required: true
                     },
-                    invalidHandler: function(evento, validador) {
-                        let camposIncorretos = validador.numberOfInvalids();
-                        if (camposIncorretos) {
-                            alert(`Existem ${camposIncorretos} campos incorretos`)
-                        }
+                    mensagem: {
+                        required: true,
+                    },
+                    veiculoDeInteresse: {
+                        required: false,
                     }
-                    })
+                },
+                messages: {
+                    nome: 'Por favor, insira o seu nome'
+                },
+                submitHandler: function(form) {
+                    console.log(form)
+                },
+                invalidHandler: function(evento, validador) {
+                    let camposIncorretos = validador.numberOfInvalids();
+                    if (camposIncorretos) {
+                        alert(`Existem ${camposIncorretos} campos incorretos`)
+                    }
+                }
             })
+        })
     </script>
 </body>
 
